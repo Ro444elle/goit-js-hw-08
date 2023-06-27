@@ -1,15 +1,15 @@
 // Add imports above this line
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
-import { galleryItems } from "./gallery-items";
+import { galleryItems } from './gallery-items';
 // Change code below this line
 
 console.log(galleryItems);
 
 const gallery = document.querySelector(`.gallery`);
 
-galleryItems.forEach((item) => {
+galleryItems.forEach(item => {
   const li = document.createElement(`li`);
   li.classList.add(`gallery__item`);
   const link = document.createElement(`a`);
@@ -26,8 +26,8 @@ galleryItems.forEach((item) => {
 });
 
 function createLightbox() {
-  const lightbox = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
+  const lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
     captionDelay: 250,
   });
   return lightbox;
@@ -35,8 +35,10 @@ function createLightbox() {
 
 const lightbox = createLightbox();
 
-gallery.addEventListener("click", (Event) => {
+gallery.addEventListener('click', Event => {
   Event.preventDefault();
   lightbox.open();
 });
-console.log("Gallery items:", galleryItems);
+console.log('Gallery items:', galleryItems);
+
+// * End of code
